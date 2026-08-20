@@ -55,6 +55,48 @@ const categoryImage: Record<string, string> = {
   "Pratos & extras": "/menus/pratos.jpeg",
 };
 
+const productArt: Record<string, Record<string, { image: string; position: string; size?: string }>> = {
+  "Hambúrgueres": {
+    "Ragnar": { image: "/menus/hamburgueres.jpeg", position: "7% 18%", size: "260%" },
+    "Björn": { image: "/menus/hamburgueres.jpeg", position: "8% 50%", size: "260%" },
+    "Big Alberna": { image: "/menus/hamburgueres.jpeg", position: "9% 86%", size: "260%" },
+    "Thor": { image: "/menus/hamburgueres.jpeg", position: "50% 52%", size: "245%" },
+    "Floki": { image: "/menus/hamburgueres.jpeg", position: "49% 88%", size: "260%" },
+    "Lagertha": { image: "/menus/hamburgueres.jpeg", position: "86% 18%", size: "260%" },
+    "Vikings Supremo": { image: "/menus/hamburgueres.jpeg", position: "86% 51%", size: "260%" },
+    "Odin": { image: "/menus/hamburgueres.jpeg", position: "86% 86%", size: "260%" },
+    "Simples": { image: "/menus/batatas-lanches-kebab.jpeg", position: "52% 13%", size: "270%" },
+    "Duplo": { image: "/menus/batatas-lanches-kebab.jpeg", position: "52% 44%", size: "270%" },
+    "Triplo": { image: "/menus/batatas-lanches-kebab.jpeg", position: "52% 73%", size: "270%" },
+    "Kids": { image: "/menus/batatas-lanches-kebab.jpeg", position: "57% 96%", size: "280%" },
+    "X Salada": { image: "/menus/batatas-lanches-kebab.jpeg", position: "83% 16%", size: "270%" },
+    "X Burger": { image: "/menus/batatas-lanches-kebab.jpeg", position: "84% 48%", size: "270%" },
+  },
+  "Cachorros": {
+    "Simples": { image: "/menus/cachorros-bifanas.jpeg", position: "27% 22%", size: "230%" },
+    "Especial": { image: "/menus/cachorros-bifanas.jpeg", position: "28% 53%", size: "230%" },
+    "Pitbull": { image: "/menus/cachorros-bifanas.jpeg", position: "26% 87%", size: "230%" },
+  },
+  "Bifanas": {
+    "Simples": { image: "/menus/cachorros-bifanas.jpeg", position: "73% 22%", size: "230%" },
+    "Especial": { image: "/menus/cachorros-bifanas.jpeg", position: "71% 54%", size: "230%" },
+    "Super": { image: "/menus/cachorros-bifanas.jpeg", position: "72% 87%", size: "230%" },
+  },
+  "Porções & batatas": {
+    "Simples": { image: "/menus/batatas-lanches-kebab.jpeg", position: "22% 18%", size: "260%" },
+    "Bacon + Cheddar": { image: "/menus/batatas-lanches-kebab.jpeg", position: "22% 53%", size: "260%" },
+    "Suprema": { image: "/menus/batatas-lanches-kebab.jpeg", position: "22% 87%", size: "260%" },
+  },
+  "Kebabs": {
+    "Kebab misto": { image: "/menus/batatas-lanches-kebab.jpeg", position: "84% 88%", size: "240%" },
+  },
+  "Pratos & extras": {
+    "Banquete dos Deuses": { image: "/menus/pratos.jpeg", position: "47% 19%", size: "215%" },
+    "Entremeada": { image: "/menus/pratos.jpeg", position: "19% 76%", size: "230%" },
+    "Prego": { image: "/menus/pratos.jpeg", position: "81% 72%", size: "230%" },
+  },
+};
+
 const icon: Record<string, string> = {
   "Hambúrgueres": "ᚱ", Cachorros: "ᚲ", Bifanas: "ᛒ", "Porções & batatas": "ᛃ", Kebabs: "ᚴ", "Pratos & extras": "ᛟ",
 };
@@ -90,10 +132,12 @@ export default function Home() {
         <div className="category-head"><div><p>CATEGORIA</p><h3>{active}</h3></div><span>{items.length} {items.length === 1 ? "item" : "itens"}</span></div>
         <figure className="original-menu"><img src={categoryImage[active]} alt={`Arte original da categoria ${active}`}/><figcaption>Arte original · toque nas categorias para consultar os produtos</figcaption></figure>
         <div className="cards">
-          {items.map((item, index) => <article className="card" key={item.name}>
-            <div className={`food-art art-${index % 4}`}><span>{icon[active]}</span><i>Arte original acima</i></div>
+          {items.map((item, index) => {
+            const art = productArt[active]?.[item.name];
+            return <article className="card" key={item.name}>
+            <div className={`food-art art-${index % 4} ${art ? "real-food" : ""}`} style={art ? { backgroundImage: `url(${art.image})`, backgroundPosition: art.position, backgroundSize: art.size ?? "250%" } : undefined}>{!art && <span>{icon[active]}</span>}<i>{art ? "Foto original" : "Imagem a confirmar"}</i></div>
             <div className="card-body"><div className="card-top"><h4>{item.name}</h4><strong>{item.price ?? "Preço a confirmar"}</strong></div><p>{item.description}</p>{item.mark && <small>⚠ {item.mark}</small>}</div>
-          </article>)}
+          </article>})}
           {items.length === 0 && <p className="empty">Nenhum item encontrado nesta categoria.</p>}
         </div>
       </section>

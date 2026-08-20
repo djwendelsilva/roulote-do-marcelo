@@ -26,6 +26,30 @@
   text-transform: uppercase;
 }
 
+.food-art.real-food {
+  background-color: #120d09;
+  background-repeat: no-repeat;
+  filter: saturate(1.08) contrast(1.04);
+}
+
+.food-art.real-food::before {
+  display: none;
+}
+
+.food-art.real-food::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 55%, rgba(5, 5, 4, 0.72));
+  pointer-events: none;
+}
+
+.food-art.real-food i {
+  z-index: 1;
+  color: #f2dfbd;
+  text-shadow: 0 1px 5px #000;
+}
+
 @media (max-width: 600px) {
   .original-menu img { min-height: 210px; object-fit: cover; }
   .original-menu figcaption { right: 12px; text-align: center; }
