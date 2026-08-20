@@ -6,30 +6,53 @@ type Item = { name: string; description: string; price?: string; mark?: string }
 
 const menu: Record<string, Item[]> = {
   "Hambúrgueres": [
-    { name: "Ragnar", description: "Ingredientes a confirmar com o cardápio original.", mark: "Revisar composição e preço" },
-    { name: "Björn", description: "Ingredientes a confirmar com o cardápio original.", mark: "Revisar composição e preço" },
-    { name: "Thor", description: "Ingredientes a confirmar com o cardápio original.", mark: "Revisar composição e preço" },
-    { name: "Lagertha", description: "Ingredientes a confirmar com o cardápio original.", mark: "Revisar composição e preço" },
+    { name: "Ragnar", price: "11,50 €", description: "Pão de hambúrguer, hambúrguer de vitela, ovo, queijo, fiambre, bacon, salada, molhos e batata palha. Com bebida e batata." },
+    { name: "Björn", price: "12,50 €", description: "Pão de hambúrguer, bife de vitela, ovo, queijo, bacon, fiambre, salada e batata palha. Com bebida e batata." },
+    { name: "Big Alberna", price: "16,50 €", description: "Pão de hambúrguer, 2 hambúrgueres de vitela, bife de bifana, bife de frango, salsicha, ovo, queijo, fiambre, bacon, salada, milho, molhos e batata palha." },
+    { name: "Thor", price: "22,00 €", description: "3 hambúrgueres de vitela, bife de vitela, 2 salsichas, 2 ovos, bife de frango, bife de bifana, queijo, bacon, milho, cebola, fiambre, salada, molhos especiais e batata palha. Com bebida e batata." },
+    { name: "Floki", price: "14,50 €", description: "Pão de hambúrguer, 2 hambúrgueres de vitela, ovo, bife de vitela, queijo, fiambre, ananás, molhos e batata palha. Com bebida e batata." },
+    { name: "Lagertha", price: "13,50 €", description: "Pão de hambúrguer, hambúrguer de vitela, bife de bifana, salsicha, ovo, queijo, fiambre, bacon, salada, milho, molhos e batata palha." },
+    { name: "Vikings Supremo", price: "13,50 €", description: "Pão, três hambúrgueres de vitela, queijo, bacon, ovo, alface, milho, tomate, fiambre, cebola, molhos e batata palha." },
+    { name: "Odin", price: "13,50 €", description: "Pão de hambúrguer, hambúrguer de picanha, ovo, bacon, queijo, fiambre, molho e batata palha. Com bebida." },
+    { name: "Simples", price: "6,00 €", description: "Hambúrguer simples. Com bebida." },
+    { name: "Duplo", price: "9,00 €", description: "Hambúrguer duplo. Com bebida." },
+    { name: "Triplo", price: "12,00 €", description: "Hambúrguer triplo. Com bebida e batata." },
+    { name: "Kids", price: "7,00 €", description: "Menu infantil com hambúrguer, batata e Sumol." },
+    { name: "X Salada", price: "9,00 €", description: "Pão, hambúrguer, queijo, salada, molhos e batata palha. Com bebida." },
+    { name: "X Burger", price: "8,50 €", description: "Pão, hambúrguer, fiambre, queijo, picles e molhos. Com bebida." },
   ],
   "Cachorros": [
-    { name: "Cachorro", description: "Receita e acompanhamentos a confirmar.", mark: "Revisar conteúdo das fotos" },
-    { name: "Cachorro especial", description: "Receita e acompanhamentos a confirmar.", mark: "Revisar conteúdo das fotos" },
+    { name: "Simples", price: "5,50 €", description: "Pão, salsicha, batata palha e molhos." },
+    { name: "Especial", price: "8,50 €", description: "Pão, salsicha, fiambre, queijo, bacon, batata palha e molhos. Com bebida." },
+    { name: "Pitbull", price: "10,00 €", description: "Pão, salsicha, milho, fiambre, queijo cheddar, bacon, batata palha, alface, tomate e molhos. Com bebida." },
   ],
   "Bifanas": [
-    { name: "Bifana", description: "Preparação, ingredientes e preço a confirmar.", mark: "Revisar conteúdo das fotos" },
+    { name: "Simples", price: "5,50 €", description: "2 bifes de bifana no pão. Com bebida." },
+    { name: "Especial", price: "8,50 €", description: "2 bifes de bifana no pão, fiambre, queijo e bacon. Com bebida." },
+    { name: "Super", price: "12,00 €", description: "2 bifes de bifana no pão, 2 ovos, fiambre, queijo, bacon e molho da casa. Com bebida e batata." },
   ],
   "Porções & batatas": [
-    { name: "Porção de batatas", description: "Tamanho e preço a confirmar.", mark: "Revisar conteúdo das fotos" },
-    { name: "Batata especial", description: "Molhos e complementos a confirmar.", mark: "Revisar conteúdo das fotos" },
+    { name: "Simples", price: "3,50 €", description: "Porção de batata frita." },
+    { name: "Bacon + Cheddar", price: "7,50 €", description: "Batata com bacon e queijo cheddar. Porção para duas pessoas." },
+    { name: "Suprema", price: "10,00 €", description: "Batata, bacon, frango e queijo cheddar. Porção para três pessoas. Com bebida." },
   ],
   "Kebabs": [
-    { name: "Kebab", description: "Proteína, salada e molhos a confirmar.", mark: "Revisar conteúdo das fotos" },
-    { name: "Kebab no prato", description: "Acompanhamentos e preço a confirmar.", mark: "Revisar conteúdo das fotos" },
+    { name: "Kebab misto", price: "13,50 €", description: "Kebab, bife de frango, bife de bifana, ovo, bacon, salada, molho da casa e batata palha. Com bebida." },
   ],
   "Pratos & extras": [
-    { name: "Prato do guerreiro", description: "Composição a confirmar com o proprietário.", mark: "Nome provisório — revisar" },
-    { name: "Extras", description: "Opções e valores a confirmar.", mark: "Revisar conteúdo das fotos" },
+    { name: "Banquete dos Deuses", price: "13,00 €", description: "Bife de vitela, bife de frango ou bife de porco, arroz, salada, batata frita, ovo, queijo, fiambre e bacon. Com bebida." },
+    { name: "Entremeada", price: "5,50 €", description: "Entremeada no pão. Com bebida." },
+    { name: "Prego", price: "6,00 €", description: "Prego no pão. Com bebida." },
   ],
+};
+
+const categoryImage: Record<string, string> = {
+  "Hambúrgueres": "/menus/hamburgueres.jpeg",
+  "Cachorros": "/menus/cachorros-bifanas.jpeg",
+  "Bifanas": "/menus/cachorros-bifanas.jpeg",
+  "Porções & batatas": "/menus/batatas-lanches-kebab.jpeg",
+  "Kebabs": "/menus/batatas-lanches-kebab.jpeg",
+  "Pratos & extras": "/menus/pratos.jpeg",
 };
 
 const icon: Record<string, string> = {
@@ -59,15 +82,16 @@ export default function Home() {
       </header>
 
       <section className="menu-section" id="menu">
-        <div className="section-title"><p>O BANQUETE</p><h2>Escolha sua batalha</h2><span>Produtos em revisão aparecem sinalizados — nenhum texto ilegível foi inventado.</span></div>
+        <div className="section-title"><p>O BANQUETE</p><h2>Escolha sua batalha</h2><span>Cardápio reconstruído a partir das artes originais do Roulote do Marcelo.</span></div>
         <label className="search"><span>⌕</span><input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Buscar no cardápio" aria-label="Buscar no cardápio"/></label>
         <div className="category-tabs" role="tablist">
           {categories.map((category) => <button key={category} className={active === category ? "active" : ""} onClick={() => { setActive(category); setQuery(""); }}><b>{icon[category]}</b><span>{category}</span></button>)}
         </div>
         <div className="category-head"><div><p>CATEGORIA</p><h3>{active}</h3></div><span>{items.length} {items.length === 1 ? "item" : "itens"}</span></div>
+        <figure className="original-menu"><img src={categoryImage[active]} alt={`Arte original da categoria ${active}`}/><figcaption>Arte original · toque nas categorias para consultar os produtos</figcaption></figure>
         <div className="cards">
           {items.map((item, index) => <article className="card" key={item.name}>
-            <div className={`food-art art-${index % 4}`}><span>{icon[active]}</span><i>Em breve: foto original</i></div>
+            <div className={`food-art art-${index % 4}`}><span>{icon[active]}</span><i>Arte original acima</i></div>
             <div className="card-body"><div className="card-top"><h4>{item.name}</h4><strong>{item.price ?? "Preço a confirmar"}</strong></div><p>{item.description}</p>{item.mark && <small>⚠ {item.mark}</small>}</div>
           </article>)}
           {items.length === 0 && <p className="empty">Nenhum item encontrado nesta categoria.</p>}
