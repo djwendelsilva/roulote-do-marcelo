@@ -142,7 +142,7 @@ const productArt: Record<string, Record<string, { image: string; position: strin
     "Suprema": { image: "/products/batata-suprema.jpg", position: "left center", size: "cover" },
   },
   "Kebabs": {
-    "Kebab misto": { image: "/products/kebab-misto.jpg", position: "left center", size: "cover" },
+    "Kebab misto": { image: "/products/kebab-misto.jpg", position: "center", size: "cover" },
   },
   "Pratos & extras": {
     "Banquete dos Deuses": { image: "/products/banquete-dos-deuses-v2.jpg", position: "center", size: "cover" },
