@@ -257,7 +257,7 @@ export default function Home() {
         <div className="footer-copy"><p>Roulote do Marcelo · Ementa digital</p><small>Sabores dignos de Valhalla</small></div>
         <div className="developer-contact">
           <span>Desenvolvedor: <strong>Wendel Silva</strong></span>
-          <a className="developer-whatsapp" href="https://wa.me/5521991902018" target="_blank" rel="noreferrer">WhatsApp: +55 21 99190-2018</a>
+          <a className="developer-whatsapp" href="https://wa.me/5521991902018" target="_blank" rel="noreferrer">WhatsApp</a>
           <a href="mailto:djwendelrj@gmail.com">djwendelrj@gmail.com</a>
         </div>
       </footer>
