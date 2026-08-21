@@ -192,17 +192,17 @@ const productArt: Record<string, Record<string, { image: string; position: strin
 };
 
 const categoryIconPaths: Record<string, string[]> = {
-  "Hambúrgueres": ["M5 11h14", "M6 8c1-3 11-3 12 0", "M5 14c3 2 11 2 14 0", "M6 17h12c0 2-1 3-3 3H9c-2 0-3-1-3-3Z"],
-  Cachorros: ["M5 15 15 5c2-2 5 1 3 3L8 18c-2 2-5-1-3-3Z", "m8 15 7-7", "M4 11 2 9", "m15 13 3 2"],
-  Bifanas: ["M5 9c3-3 11-3 14 0", "M4 12h16", "M5 15c4 2 10 2 14 0", "M6 18h12"],
-  "Porções & batatas": ["M7 7h10l-1 14H8L7 7Z", "m9 7 1-4", "m12 7 1-4", "m8 7-1-4", "M10 11v6", "M14 11v6"],
-  Kebabs: ["M12 3v18", "M8 6c0-2 8-2 8 0s-2 3-4 3-4-1-4-3Z", "M8 12c0-2 8-2 8 0s-2 3-4 3-4-1-4-3Z", "M9 18h6"],
-  "Pratos & extras": ["M3 14h18", "M5 14a7 7 0 0 1 14 0", "M12 5v2", "M8 6l1 2", "m16-2-1 2"],
+  "Hambúrgueres": ["M12 3 20 6v6c0 5-3 8-8 10-5-2-8-5-8-10V6l8-3Z", "M9 9h6", "M12 7v8"],
+  Cachorros: ["m5 19 14-14", "m15 5 4 4", "m5 15 4 4", "M14 4l2-2 2 2-1 3"],
+  Bifanas: ["m6 20 7-7", "M11 4c4-2 8 0 9 3l-7 7-4-4 2-6Z", "M5 17l2 2", "M4 21l3-3"],
+  "Porções & batatas": ["M4 9l3 3 5-7 5 7 3-3-2 11H6L4 9Z", "M7 16h10", "M9 12h6"],
+  Kebabs: ["M12 3v18", "m9 6 3-3 3 3-3 3-3-3Z", "M8 13h8", "M9 18h6", "m10 21 2-2 2 2"],
+  "Pratos & extras": ["M5 15V9a7 7 0 0 1 14 0v6", "M4 15h16", "M7 15v4", "M17 15v4", "M7 19h10", "M9 8V5l3-2 3 2v3"],
   Vinhos: ["M7 3h10l-1 7a4 4 0 0 1-8 0L7 3Z", "M12 14v7", "M9 21h6", "M8 8h8"],
-  "Refrigerantes & águas": ["M7 3h10l-1 18H8L7 3Z", "M8 7h8", "M9 11h6", "m14 3 3-2"],
+  "Refrigerantes & águas": ["M10 3h4", "M11 3v4l-4 7a5 5 0 0 0 10 0l-4-7V3", "M8 15h8", "m10 12 1-1", "m14 13 1-1"],
   "Cervejas & sidra": ["M5 7h11v13H5V7Z", "M16 10h2a3 3 0 0 1 0 6h-2", "M6 7c0-3 3-4 5-2 2-2 5 0 5 2", "M8 11v6", "M12 11v6"],
-  "Whisky & licores": ["M5 7h14l-2 14H7L5 7Z", "M7 15h10", "m9 11 2 4", "m13 11-2 4"],
-  Café: ["M4 8h13v7a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8Z", "M17 10h1a3 3 0 0 1 0 6h-2", "M8 3v2", "m12-2 0 2", "M4 22h15"],
+  "Whisky & licores": ["M4 6c5 0 9 2 13 6", "M17 12c2 1 3 3 2 5-2 3-7 3-10 1-3-2-4-7-5-12Z", "M6 8l4 10", "M17 12l3-2"],
+  Café: ["M5 10h14l-2 9H7l-2-9Z", "M7 10c0-4 10-4 10 0", "M9 6V3", "m12 6 1-3", "m15 7 2-3", "M4 21h16"],
 };
 
 function CategoryIcon({ category }: { category: string }) {
