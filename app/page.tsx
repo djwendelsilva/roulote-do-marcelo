@@ -137,7 +137,7 @@ const productArt: Record<string, Record<string, { image: string; position: strin
     "Super": { image: "/products/bifana-super.jpg", position: "18% center", size: "cover" },
   },
   "Porções & batatas": {
-    "Simples": { image: "/products/batata-simples.jpg", position: "left center", size: "cover" },
+    "Simples": { image: "/products/batata-simples-restaurada.png", position: "center", size: "cover" },
     "Bacon + Cheddar": { image: "/products/bacon-cheddar.jpg", position: "left center", size: "cover" },
     "Suprema": { image: "/products/batata-suprema.jpg", position: "left center", size: "cover" },
   },
