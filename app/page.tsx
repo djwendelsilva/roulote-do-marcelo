@@ -146,7 +146,7 @@ const productArt: Record<string, Record<string, { image: string; position: strin
   },
   "Pratos & extras": {
     "Banquete dos Deuses": { image: "/products/banquete-dos-deuses-v2.jpg", position: "center", size: "cover" },
-    "Entremeada": { image: "/menus/pratos.jpeg", position: "19% 76%", size: "230%" },
+    "Entremeada": { image: "/products/entremeada-v2.jpg", position: "center", size: "cover" },
     "Prego": { image: "/menus/pratos.jpeg", position: "81% 72%", size: "230%" },
   },
   "Vinhos": {
