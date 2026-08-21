@@ -138,7 +138,7 @@ const productArt: Record<string, Record<string, { image: string; position: strin
   },
   "Porções & batatas": {
     "Simples": { image: "/products/batata-simples-restaurada.png", position: "center", size: "cover" },
-    "Bacon + Cheddar": { image: "/products/bacon-cheddar.jpg", position: "left center", size: "cover" },
+    "Bacon + Cheddar": { image: "/products/bacon-cheddar-restaurada.png", position: "center", size: "cover" },
     "Suprema": { image: "/products/batata-suprema.jpg", position: "left center", size: "cover" },
   },
   "Kebabs": {
