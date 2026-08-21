@@ -137,15 +137,25 @@
 }
 
 .hero .shield span {
+  position: absolute;
+  top: 34%;
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 70px;
   color: #e9a13b;
   text-shadow: 0 3px 8px #000;
 }
 
 .hero .shield b {
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  width: 72%;
+  transform: translate(-50%, -50%);
   color: var(--cream);
   font-size: 22px;
   line-height: 1.45;
+  text-align: center;
   text-shadow: 0 3px 8px #000;
 }
 
