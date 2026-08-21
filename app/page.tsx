@@ -237,7 +237,15 @@ export default function Home() {
 
 
       <section className="qr-section"><div className="qr-copy"><p>APONTE A CÂMERA</p><h2>Ementa sempre à mão</h2><span>Leia o QR Code para abrir a ementa online em qualquer telemóvel.</span></div><div className="qr-card"><img src="/qrcode.png" alt="QR Code para abrir a ementa digital"/><small>EMENTA ONLINE</small></div></section>
-      <footer><span className="brand-mark">RM</span><p>Roulote do Marcelo · Ementa digital</p><small>Sabores dignos de Valhalla</small></footer>
+      <footer>
+        <span className="brand-mark">RM</span>
+        <div className="footer-copy"><p>Roulote do Marcelo · Ementa digital</p><small>Sabores dignos de Valhalla</small></div>
+        <div className="developer-contact">
+          <span>Desenvolvedor: <strong>Wendel Silva</strong></span>
+          <a className="developer-whatsapp" href="https://wa.me/5521991902018" target="_blank" rel="noreferrer">WhatsApp: +55 21 99190-2018</a>
+          <a href="mailto:djwendelrj@gmail.com">djwendelrj@gmail.com</a>
+        </div>
+      </footer>
     </main>
   );
 }

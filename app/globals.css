@@ -20,3 +20,39 @@
   letter-spacing: 0.2px;
   text-transform: none;
 }
+
+.footer-copy {
+  flex: 1;
+}
+
+.footer-copy p {
+  margin: 0 0 6px;
+}
+
+.developer-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  font-size: 12px;
+}
+
+.developer-contact strong,
+.developer-contact > a:not(.developer-whatsapp) {
+  color: var(--cream);
+}
+
+.developer-whatsapp {
+  padding: 10px 14px;
+  border-radius: 4px;
+  background: #25d366;
+  color: #07150b;
+  font-weight: 800;
+}
+
+@media (max-width: 700px) {
+  .developer-contact {
+    width: 100%;
+    align-items: flex-start;
+  }
+}
