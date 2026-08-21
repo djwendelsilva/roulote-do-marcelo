@@ -201,8 +201,6 @@ export default function Home() {
   const [active, setActive] = useState(categories[0]);
   const [query, setQuery] = useState("");
   const items = useMemo(() => menu[active].filter((item) => item.name.toLowerCase().includes(query.toLowerCase())), [active, query]);
-  const whatsappNumber = "351000000000";
-  const whatsappText = encodeURIComponent("Olá! Quero fazer um pedido no Roulote do Marcelo.");
 
   return (
     <main>
@@ -237,11 +235,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="order-panel"><span>ᛟ</span><div><p>PRONTO PARA O BANQUETE?</p><h2>Faça seu pedido</h2><small>O número abaixo é um placeholder configurável.</small></div><a href={`https://wa.me/${whatsappNumber}?text=${whatsappText}`} target="_blank" rel="noreferrer">Pedir pelo WhatsApp <b>↗</b></a></section>
 
       <section className="qr-section"><div className="qr-copy"><p>APONTE A CÂMERA</p><h2>Cardápio sempre à mão</h2><span>Leia o QR Code para abrir o cardápio online em qualquer telemóvel.</span></div><div className="qr-card"><img src="/qrcode.png" alt="QR Code para abrir o cardápio digital"/><small>CARDÁPIO ONLINE</small></div></section>
       <footer><span className="brand-mark">RM</span><p>Roulote do Marcelo · Cardápio digital</p><small>Sabores dignos de Valhalla</small></footer>
-      <a className="floating-whatsapp" href={`https://wa.me/${whatsappNumber}?text=${whatsappText}`} target="_blank" rel="noreferrer" aria-label="Pedir pelo WhatsApp">☏</a>
     </main>
   );
 }
