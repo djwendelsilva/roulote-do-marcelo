@@ -255,7 +255,7 @@ export default function Home() {
         </a>
         <div className="developer-contact">
           <span>Desenvolvedor: <strong>Wendel Silva</strong></span>
-          <a className="developer-whatsapp" href="https://wa.me/5521991902018" target="_blank" rel="noreferrer">WhatsApp</a>
+          <a className="developer-whatsapp" href="https://wa.me/5521991902018?text=Ol%C3%A1%21%20Vim%20pelo%20site%20Roulote%20do%20Marcelo%2C%20quero%20fazer%20um%20or%C3%A7amento." target="_blank" rel="noreferrer">WhatsApp</a>
           <a href="mailto:djwendelrj@gmail.com">djwendelrj@gmail.com</a>
         </div>
       </footer>
