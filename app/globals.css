@@ -83,6 +83,33 @@
   font-weight: 800;
 }
 
+.instagram-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 10px 14px;
+  border: 1px solid #8f5b3c;
+  border-radius: 4px;
+  color: var(--cream);
+  font-size: 12px;
+  font-weight: 800;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.instagram-link:hover {
+  border-color: #d79535;
+  background: #211710;
+}
+
+.instagram-link svg {
+  width: 19px;
+  height: 19px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+}
+
 @media (max-width: 700px) {
   .developer-contact {
     width: 100%;
@@ -318,6 +345,11 @@
 
   .developer-whatsapp {
     text-align: center;
+  }
+
+  .instagram-link {
+    width: 100%;
+    min-height: 44px;
   }
 }
 

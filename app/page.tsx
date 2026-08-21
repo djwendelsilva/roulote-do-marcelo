@@ -249,6 +249,10 @@ export default function Home() {
       <footer>
         <span className="brand-mark">RM</span>
         <div className="footer-copy"><p>Roulote do Marcelo · Menu digital</p><small>Sabores dignos de Valhalla</small></div>
+        <a className="instagram-link" href="https://www.instagram.com/roulote_do_marcelo/" target="_blank" rel="noreferrer" aria-label="Instagram da Roulote do Marcelo">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          <span>Instagram</span>
+        </a>
         <div className="developer-contact">
           <span>Desenvolvedor: <strong>Wendel Silva</strong></span>
           <a className="developer-whatsapp" href="https://wa.me/5521991902018" target="_blank" rel="noreferrer">WhatsApp</a>
