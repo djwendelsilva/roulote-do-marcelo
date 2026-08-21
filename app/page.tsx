@@ -216,7 +216,16 @@ export default function Home() {
     <main>
       <header className="hero">
         <div className="ember ember-one" /><div className="ember ember-two" />
-        <nav><span className="brand-mark">RM</span><a href="#menu">VER MENU ↓</a></nav>
+        <nav>
+          <span className="brand-mark">RM</span>
+          <div className="nav-actions">
+            <a className="instagram-link header-instagram" href="https://www.instagram.com/roulote_do_marcelo/" target="_blank" rel="noreferrer" aria-label="Instagram da Roulote do Marcelo">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+              <span>Instagram</span>
+            </a>
+            <a href="#menu">VER MENU ↓</a>
+          </div>
+        </nav>
         <div className="hero-copy">
           <p className="eyebrow">SABORES DIGNOS DE VALHALLA</p>
           <h1>ROULOTE<br/><span>DO MARCELO</span></h1>
@@ -249,10 +258,6 @@ export default function Home() {
       <footer>
         <span className="brand-mark">RM</span>
         <div className="footer-copy"><p>Roulote do Marcelo · Menu digital</p><small>Sabores dignos de Valhalla</small></div>
-        <a className="instagram-link" href="https://www.instagram.com/roulote_do_marcelo/" target="_blank" rel="noreferrer" aria-label="Instagram da Roulote do Marcelo">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-          <span>Instagram</span>
-        </a>
         <div className="developer-contact">
           <span>Desenvolvedor: <strong>Wendel Silva</strong></span>
           <a className="developer-whatsapp" href="https://wa.me/5521991902018?text=Ol%C3%A1%21%20Vim%20pelo%20site%20Roulote%20do%20Marcelo%2C%20quero%20fazer%20um%20or%C3%A7amento." target="_blank" rel="noreferrer">WhatsApp</a>

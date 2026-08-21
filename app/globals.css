@@ -110,6 +110,22 @@
   stroke-width: 1.8;
 }
 
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.hero .header-instagram {
+  padding: 8px 11px;
+  color: var(--cream);
+  letter-spacing: 0;
+}
+
+.hero .header-instagram span {
+  font-size: 11px;
+}
+
 @media (max-width: 700px) {
   .developer-contact {
     width: 100%;
@@ -139,6 +155,20 @@
     font-size: 10px;
     letter-spacing: 1.4px;
     white-space: nowrap;
+  }
+
+  .nav-actions {
+    gap: 8px;
+  }
+
+  .hero .header-instagram {
+    width: auto;
+    min-height: 38px;
+    padding: 7px 9px;
+  }
+
+  .hero .header-instagram span {
+    font-size: 10px;
   }
 
   .hero-copy {
@@ -348,7 +378,6 @@
   }
 
   .instagram-link {
-    width: 100%;
     min-height: 44px;
   }
 }
@@ -361,6 +390,15 @@
 
   .hero h1 {
     font-size: 39px;
+  }
+
+  .hero .header-instagram span {
+    display: none;
+  }
+
+  .hero .header-instagram {
+    min-height: 36px;
+    padding: 7px;
   }
 
   .card {
