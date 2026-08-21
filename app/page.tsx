@@ -96,6 +96,16 @@ const categoryImage: Record<string, string> = {
   "Pratos & extras": "/menus/pratos.jpeg",
 };
 
+const beverageArt = {
+  can: { image: "/beverages/can.png", position: "center", size: "contain" },
+  glassBottle: { image: "/beverages/glass-bottle.png", position: "center", size: "contain" },
+  water500: { image: "/beverages/water-500ml.png", position: "center", size: "contain" },
+  water1500: { image: "/beverages/water-1-5l.png", position: "center", size: "contain" },
+  wine: { image: "/beverages/wine-glass.png", position: "center", size: "contain" },
+  whisky: { image: "/beverages/whisky-glass.png", position: "center", size: "contain" },
+  coffee: { image: "/beverages/coffee.png", position: "center", size: "contain" },
+};
+
 const productArt: Record<string, Record<string, { image: string; position: string; size?: string }>> = {
   "Hambúrgueres": {
     "Ragnar": { image: "/products/ragnar.jpg", position: "18% center", size: "cover" },
@@ -136,6 +146,36 @@ const productArt: Record<string, Record<string, { image: string; position: strin
     "Entremeada": { image: "/menus/pratos.jpeg", position: "19% 76%", size: "230%" },
     "Prego": { image: "/menus/pratos.jpeg", position: "81% 72%", size: "230%" },
   },
+  "Vinhos": {
+    "Vinho branco — copo": beverageArt.wine,
+    "Vinho tinto — copo": beverageArt.wine,
+  },
+  "Refrigerantes & águas": {
+    "Coca-Cola": beverageArt.can,
+    "Fanta": beverageArt.can,
+    "Guaraná Antarctica": beverageArt.can,
+    "Sprite": beverageArt.can,
+    "Fuze Tea": beverageArt.can,
+    "Ice Tea": beverageArt.can,
+    "Água Castelo": beverageArt.glassBottle,
+    "Sumol": beverageArt.can,
+    "7UP": beverageArt.can,
+    "Red Bull": beverageArt.can,
+    "Água 500 ml": beverageArt.water500,
+    "Água 1,5 L": beverageArt.water1500,
+    "Água das Pedras": beverageArt.glassBottle,
+    "Água tónica": beverageArt.can,
+  },
+  "Cervejas & sidra": Object.fromEntries([
+    "Imperial", "Imperial média", "Imperial grande", "Sagres mini", "Sagres média",
+    "Super Bock mini", "Super Bock média", "Heineken", "Corona", "Somersby mini", "Somersby média",
+  ].map((name) => [name, beverageArt.can])),
+  "Whisky & licores": {
+    "Red Label": beverageArt.whisky,
+    "Grant’s": beverageArt.whisky,
+    "Beirão": beverageArt.whisky,
+  },
+  "Café": { "Café": beverageArt.coffee },
 };
 
 const icon: Record<string, string> = {
