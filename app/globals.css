@@ -57,6 +57,19 @@
   color: #e19a3d;
 }
 
+.food-art.beverage-art {
+  min-height: 190px;
+  background-color: #000;
+  background-size: contain !important;
+  background-position: center !important;
+}
+
+@media (max-width: 850px) {
+  .food-art.beverage-art {
+    min-height: 170px;
+  }
+}
+
 .developer-contact strong,
 .developer-contact > a:not(.developer-whatsapp) {
   color: var(--cream);

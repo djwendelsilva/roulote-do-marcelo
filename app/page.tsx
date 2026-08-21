@@ -50,6 +50,7 @@ const menu: Record<string, Item[]> = {
   ],
   "Refrigerantes & águas": [
     { name: "Coca-Cola", price: "1,90 €", description: "Refrigerante." },
+    { name: "Coca-Cola Zero", price: "1,90 €", description: "Refrigerante sem açúcar em lata." },
     { name: "Fanta", price: "1,90 €", description: "Refrigerante." },
     { name: "Guaraná Antarctica", price: "1,90 €", description: "Refrigerante." },
     { name: "Sprite", price: "1,90 €", description: "Refrigerante." },
@@ -146,6 +147,7 @@ const productArt: Record<string, Record<string, { image: string; position: strin
   },
   "Refrigerantes & águas": {
     "Coca-Cola": { image: "/beverages/black/coca-cola.png", position: "center", size: "contain" },
+    "Coca-Cola Zero": { image: "/beverages/black/coca-cola-zero.png", position: "center", size: "contain" },
     "Fanta": { image: "/beverages/black/fanta-laranja.png", position: "center", size: "contain" },
     "Guaraná Antarctica": { image: "/beverages/black/guarana.png", position: "center", size: "contain" },
     "Sprite": { image: "/beverages/black/sprite.png", position: "center", size: "contain" },
@@ -164,7 +166,7 @@ const productArt: Record<string, Record<string, { image: string; position: strin
     "Água Tónica Schweppes": { image: "/beverages/black/schweppes.png", position: "center", size: "contain" },
   },
   "Cervejas & sidra": {
-    ...Object.fromEntries(["Imperial Sagres", "Imperial Sagres média", "Imperial Sagres grande"].map((name) => [name, { image: "/beverages/black/imperial-sagres-disposable-plastic-cup.png", position: "center", size: "cover" }])),
+    ...Object.fromEntries(["Imperial Sagres", "Imperial Sagres média", "Imperial Sagres grande"].map((name) => [name, { image: "/beverages/black/imperial-sagres-disposable-plastic-cup.png", position: "center", size: "contain" }])),
     "Sagres mini": { image: "/beverages/black/sagres-mini-25cl-glass.png", position: "center", size: "contain" },
     "Sagres média": { image: "/beverages/black/sagres-glass.png", position: "center", size: "contain" },
     "Super Bock mini": { image: "/beverages/black/super-bock-mini-glass.png", position: "center", size: "contain" },
@@ -195,6 +197,8 @@ const categoryIconPaths: Record<string, string[]> = {
   "Whisky & licores": ["M4 6c5 0 9 2 13 6", "M17 12c2 1 3 3 2 5-2 3-7 3-10 1-3-2-4-7-5-12Z", "M6 8l4 10", "M17 12l3-2"],
   Café: ["M5 10h14l-2 9H7l-2-9Z", "M7 10c0-4 10-4 10 0", "M9 6V3", "m12 6 1-3", "m15 7 2-3", "M4 21h16"],
 };
+
+const beverageCategories = new Set(["Vinhos", "Refrigerantes & águas", "Cervejas & sidra", "Whisky & licores", "Café"]);
 
 function CategoryIcon({ category }: { category: string }) {
   return <svg className="category-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
@@ -233,7 +237,7 @@ export default function Home() {
           {items.map((item, index) => {
             const art = productArt[active]?.[item.name];
             return <article className="card" key={item.name}>
-            <div className={`food-art art-${index % 4} ${art ? "real-food" : ""}`} style={art ? { backgroundImage: `url(${art.image})`, backgroundPosition: art.position, backgroundSize: art.size ?? "250%", backgroundRepeat: "no-repeat" } : undefined}>{!art && <><CategoryIcon category={active}/><i>Imagem a confirmar</i></>}</div>
+            <div className={`food-art art-${index % 4} ${art ? "real-food" : ""} ${beverageCategories.has(active) ? "beverage-art" : ""}`} style={art ? { backgroundImage: `url(${art.image})`, backgroundPosition: art.position, backgroundSize: art.size ?? "250%", backgroundRepeat: "no-repeat" } : undefined}>{!art && <><CategoryIcon category={active}/><i>Imagem a confirmar</i></>}</div>
             <div className="card-body"><div className="card-top"><h4>{item.name}</h4><strong>{item.price ?? "Preço a confirmar"}</strong></div><p>{item.description}</p>{item.mark && <small>⚠ {item.mark}</small>}</div>
           </article>})}
           {items.length === 0 && <p className="empty">Nenhum item encontrado nesta categoria.</p>}
