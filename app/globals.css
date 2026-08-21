@@ -37,6 +37,26 @@
   font-size: 12px;
 }
 
+.category-icon {
+  width: 34px;
+  height: 34px;
+  color: #796a56;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.55));
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.category-tabs button:hover .category-icon,
+.category-tabs button.active .category-icon {
+  color: var(--gold);
+  transform: translateY(-1px) scale(1.06);
+}
+
+.food-art > .category-icon {
+  width: 72px;
+  height: 72px;
+  color: #e19a3d;
+}
+
 .developer-contact strong,
 .developer-contact > a:not(.developer-whatsapp) {
   color: var(--cream);

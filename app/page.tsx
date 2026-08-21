@@ -191,10 +191,25 @@ const productArt: Record<string, Record<string, { image: string; position: strin
   "Café": { "Café": beverageArt.coffee },
 };
 
-const icon: Record<string, string> = {
-  "Hambúrgueres": "ᚱ", Cachorros: "ᚲ", Bifanas: "ᛒ", "Porções & batatas": "ᛃ", Kebabs: "ᚴ", "Pratos & extras": "ᛟ",
-  Vinhos: "🍷", "Refrigerantes & águas": "🥤", "Cervejas & sidra": "🍺", "Whisky & licores": "🥃", Café: "☕",
+const categoryIconPaths: Record<string, string[]> = {
+  "Hambúrgueres": ["M5 11h14", "M6 8c1-3 11-3 12 0", "M5 14c3 2 11 2 14 0", "M6 17h12c0 2-1 3-3 3H9c-2 0-3-1-3-3Z"],
+  Cachorros: ["M5 15 15 5c2-2 5 1 3 3L8 18c-2 2-5-1-3-3Z", "m8 15 7-7", "M4 11 2 9", "m15 13 3 2"],
+  Bifanas: ["M5 9c3-3 11-3 14 0", "M4 12h16", "M5 15c4 2 10 2 14 0", "M6 18h12"],
+  "Porções & batatas": ["M7 7h10l-1 14H8L7 7Z", "m9 7 1-4", "m12 7 1-4", "m8 7-1-4", "M10 11v6", "M14 11v6"],
+  Kebabs: ["M12 3v18", "M8 6c0-2 8-2 8 0s-2 3-4 3-4-1-4-3Z", "M8 12c0-2 8-2 8 0s-2 3-4 3-4-1-4-3Z", "M9 18h6"],
+  "Pratos & extras": ["M3 14h18", "M5 14a7 7 0 0 1 14 0", "M12 5v2", "M8 6l1 2", "m16-2-1 2"],
+  Vinhos: ["M7 3h10l-1 7a4 4 0 0 1-8 0L7 3Z", "M12 14v7", "M9 21h6", "M8 8h8"],
+  "Refrigerantes & águas": ["M7 3h10l-1 18H8L7 3Z", "M8 7h8", "M9 11h6", "m14 3 3-2"],
+  "Cervejas & sidra": ["M5 7h11v13H5V7Z", "M16 10h2a3 3 0 0 1 0 6h-2", "M6 7c0-3 3-4 5-2 2-2 5 0 5 2", "M8 11v6", "M12 11v6"],
+  "Whisky & licores": ["M5 7h14l-2 14H7L5 7Z", "M7 15h10", "m9 11 2 4", "m13 11-2 4"],
+  Café: ["M4 8h13v7a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8Z", "M17 10h1a3 3 0 0 1 0 6h-2", "M8 3v2", "m12-2 0 2", "M4 22h15"],
 };
+
+function CategoryIcon({ category }: { category: string }) {
+  return <svg className="category-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+    {(categoryIconPaths[category] ?? categoryIconPaths["Pratos & extras"]).map((path) => <path d={path} key={path}/>) }
+  </svg>;
+}
 
 export default function Home() {
   const categories = Object.keys(menu);
@@ -220,7 +235,7 @@ export default function Home() {
         <div className="section-title"><p>O BANQUETE</p><h2>Escolha sua batalha</h2><span>Ementa reconstruída a partir das artes originais do Roulote do Marcelo.</span></div>
         <label className="search"><span>⌕</span><input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Buscar na ementa" aria-label="Buscar na ementa"/></label>
         <div className="category-tabs" role="tablist">
-          {categories.map((category) => <button key={category} className={active === category ? "active" : ""} onClick={() => { setActive(category); setQuery(""); }}><b>{icon[category]}</b><span>{category}</span></button>)}
+          {categories.map((category) => <button key={category} className={active === category ? "active" : ""} onClick={() => { setActive(category); setQuery(""); }}><CategoryIcon category={category}/><span>{category}</span></button>)}
         </div>
         <div className="category-head"><div><p>CATEGORIA</p><h3>{active}</h3></div><span>{items.length} {items.length === 1 ? "item" : "itens"}</span></div>
         {categoryImage[active] && <figure className="original-menu"><img src={categoryImage[active]} alt={`Arte original da categoria ${active}`}/><figcaption>Arte original · toque nas categorias para consultar os produtos</figcaption></figure>}
@@ -228,7 +243,7 @@ export default function Home() {
           {items.map((item, index) => {
             const art = productArt[active]?.[item.name];
             return <article className="card" key={item.name}>
-            <div className={`food-art art-${index % 4} ${art ? "real-food" : ""}`} style={art ? { backgroundImage: `url(${art.image})`, backgroundPosition: art.position, backgroundSize: art.size ?? "250%", backgroundRepeat: "no-repeat" } : undefined}>{!art && <><span>{icon[active]}</span><i>Imagem a confirmar</i></>}</div>
+            <div className={`food-art art-${index % 4} ${art ? "real-food" : ""}`} style={art ? { backgroundImage: `url(${art.image})`, backgroundPosition: art.position, backgroundSize: art.size ?? "250%", backgroundRepeat: "no-repeat" } : undefined}>{!art && <><CategoryIcon category={active}/><i>Imagem a confirmar</i></>}</div>
             <div className="card-body"><div className="card-top"><h4>{item.name}</h4><strong>{item.price ?? "Preço a confirmar"}</strong></div><p>{item.description}</p>{item.mark && <small>⚠ {item.mark}</small>}</div>
           </article>})}
           {items.length === 0 && <p className="empty">Nenhum item encontrado nesta categoria.</p>}
