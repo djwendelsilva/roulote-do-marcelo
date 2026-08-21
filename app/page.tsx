@@ -122,7 +122,7 @@ const productArt: Record<string, Record<string, { image: string; position: strin
     "Simples": { image: "/products/hamburguer-simples.jpg", position: "left center", size: "cover" },
     "Duplo": { image: "/products/duplo.jpg", position: "left center", size: "cover" },
     "Triplo": { image: "/products/triplo.jpg", position: "left center", size: "cover" },
-    "Kids": { image: "/menus/batatas-lanches-kebab.jpeg", position: "57% 96%", size: "280%" },
+    "Kids": { image: "/products/kids.jpg", position: "left center", size: "cover" },
     "X Salada": { image: "/products/x-salada.jpg", position: "left center", size: "cover" },
     "X Burger": { image: "/products/x-burger.jpg", position: "left center", size: "cover" },
   },
