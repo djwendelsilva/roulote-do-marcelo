@@ -173,7 +173,7 @@ const productArt: Record<string, Record<string, { image: string; position: strin
     "Água Tónica Schweppes": { image: "/beverages/real/schweppes.png", position: "center", size: "contain" },
   },
   "Cervejas & sidra": {
-    ...Object.fromEntries(["Imperial Sagres", "Imperial Sagres média", "Imperial Sagres grande"].map((name) => [name, { image: "/beverages/real/imperial-sagres-plastic-cups.jpg", position: "left bottom", size: "cover" }])),
+    ...Object.fromEntries(["Imperial Sagres", "Imperial Sagres média", "Imperial Sagres grande"].map((name) => [name, { image: "/beverages/real/imperial-sagres-plastic-cup-full.png", position: "center", size: "cover" }])),
     "Sagres mini": { image: "/beverages/real/sagres-mini-25cl-glass.jpg", position: "center", size: "contain" },
     "Sagres média": { image: "/beverages/real/sagres-glass.jpg", position: "center", size: "contain" },
     "Super Bock mini": { image: "/beverages/real/super-bock-mini-glass.jpg", position: "center", size: "contain" },
