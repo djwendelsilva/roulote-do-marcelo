@@ -145,7 +145,7 @@ const productArt: Record<string, Record<string, { image: string; position: strin
     "Kebab misto": { image: "/products/kebab-misto.jpg", position: "left center", size: "cover" },
   },
   "Pratos & extras": {
-    "Banquete dos Deuses": { image: "/products/banquete-dos-deuses.jpg", position: "18% center", size: "cover" },
+    "Banquete dos Deuses": { image: "/products/banquete-dos-deuses-v2.jpg", position: "center", size: "cover" },
     "Entremeada": { image: "/menus/pratos.jpeg", position: "19% 76%", size: "230%" },
     "Prego": { image: "/menus/pratos.jpeg", position: "81% 72%", size: "230%" },
   },
