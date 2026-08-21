@@ -68,9 +68,9 @@ const menu: Record<string, Item[]> = {
     { name: "Água Tónica Schweppes", price: "1,90 €", description: "Água tónica Schweppes em lata." },
   ],
   "Cervejas & sidra": [
-    { name: "Imperial Sagres", price: "1,30 €", description: "Cerveja Sagres servida em copo." },
-    { name: "Imperial Sagres média", price: "1,60 €", description: "Cerveja Sagres servida em copo médio." },
-    { name: "Imperial Sagres grande", price: "3,50 €", description: "Cerveja Sagres servida em copo grande." },
+    { name: "Imperial Sagres", price: "1,30 €", description: "Cerveja Sagres servida em copo plástico Sagres." },
+    { name: "Imperial Sagres média", price: "1,60 €", description: "Cerveja Sagres servida em copo plástico Sagres médio." },
+    { name: "Imperial Sagres grande", price: "3,50 €", description: "Cerveja Sagres servida em copo plástico Sagres grande." },
     { name: "Sagres mini", price: "1,50 €", description: "25 cl (250 ml), garrafa de vidro não retornável (perdida)." },
     { name: "Sagres média", price: "2,00 €", description: "33 cl (330 ml), garrafa de vidro." },
     { name: "Super Bock mini", price: "1,50 €", description: "Cerveja Super Bock mini em garrafa de vidro." },
@@ -173,7 +173,7 @@ const productArt: Record<string, Record<string, { image: string; position: strin
     "Água Tónica Schweppes": { image: "/beverages/real/schweppes.png", position: "center", size: "contain" },
   },
   "Cervejas & sidra": {
-    ...Object.fromEntries(["Imperial Sagres", "Imperial Sagres média", "Imperial Sagres grande"].map((name) => [name, { image: "/beverages/real/imperial-sagres.png", position: "center", size: "contain" }])),
+    ...Object.fromEntries(["Imperial Sagres", "Imperial Sagres média", "Imperial Sagres grande"].map((name) => [name, { image: "/beverages/real/imperial-sagres-plastic-cups.jpg", position: "left bottom", size: "cover" }])),
     "Sagres mini": { image: "/beverages/real/sagres-mini-25cl-glass.jpg", position: "center", size: "contain" },
     "Sagres média": { image: "/beverages/real/sagres-glass.jpg", position: "center", size: "contain" },
     "Super Bock mini": { image: "/beverages/real/super-bock-mini-glass.jpg", position: "center", size: "contain" },
