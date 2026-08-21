@@ -89,3 +89,253 @@
     align-items: flex-start;
   }
 }
+
+/* Mobile layout */
+@media (max-width: 600px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .hero {
+    min-height: 100svh;
+    padding: 18px 20px 56px;
+    background-position: center;
+  }
+
+  .hero nav {
+    padding-bottom: 16px;
+  }
+
+  .hero nav a {
+    font-size: 10px;
+    letter-spacing: 1.4px;
+    white-space: nowrap;
+  }
+
+  .hero-copy {
+    padding-top: clamp(82px, 16vh, 130px);
+    max-width: 100%;
+  }
+
+  .eyebrow {
+    max-width: 270px;
+    font-size: 10px;
+    line-height: 1.5;
+  }
+
+  .hero h1 {
+    max-width: 100%;
+    margin: 18px 0 24px;
+    font-size: clamp(39px, 12.5vw, 54px);
+    line-height: 0.9;
+    letter-spacing: -2px;
+    overflow-wrap: anywhere;
+  }
+
+  .hero h1 span {
+    display: block;
+    font-size: 0.88em;
+  }
+
+  .lead {
+    max-width: min(310px, 84vw);
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .primary {
+    width: 100%;
+    max-width: 330px;
+    min-height: 58px;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 17px 20px;
+  }
+
+  .shield {
+    top: auto;
+    right: -54px;
+    bottom: 45px;
+    width: 140px;
+    height: 165px;
+    opacity: 0.22;
+    border-width: 6px;
+    pointer-events: none;
+  }
+
+  .shield span {
+    font-size: 42px;
+  }
+
+  .shield b {
+    font-size: 13px;
+  }
+
+  .menu-section {
+    padding: 58px 16px 64px;
+  }
+
+  .section-title h2,
+  .qr-copy h2 {
+    font-size: clamp(32px, 10vw, 42px);
+    line-height: 1.05;
+  }
+
+  .section-title span,
+  .qr-copy span {
+    display: block;
+    font-size: 14px;
+  }
+
+  .search {
+    margin: 30px 0 22px;
+    width: 100%;
+  }
+
+  .category-tabs {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 108px;
+    grid-template-columns: none;
+    gap: 8px;
+    margin: 0 -16px;
+    padding: 0 16px 8px;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+  }
+
+  .category-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .category-tabs button {
+    min-width: 0;
+    min-height: 94px;
+    padding: 13px 7px;
+    scroll-snap-align: start;
+  }
+
+  .category-tabs button span {
+    font-size: 9px;
+    line-height: 1.25;
+  }
+
+  .category-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .category-head {
+    align-items: flex-end;
+    gap: 16px;
+    margin: 40px 0 18px;
+  }
+
+  .category-head h3 {
+    max-width: 250px;
+    font-size: clamp(28px, 9vw, 36px);
+    line-height: 1;
+  }
+
+  .category-head > span {
+    flex: 0 0 auto;
+    padding-bottom: 3px;
+  }
+
+  .cards {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .card {
+    grid-template-columns: 112px minmax(0, 1fr);
+    min-height: 160px;
+  }
+
+  .food-art,
+  .food-art.beverage-art {
+    min-height: 160px;
+  }
+
+  .card-body {
+    min-width: 0;
+    padding: 16px 14px;
+  }
+
+  .card-top {
+    display: block;
+  }
+
+  .card h4 {
+    font-size: clamp(23px, 7vw, 29px);
+    overflow-wrap: anywhere;
+  }
+
+  .card strong {
+    display: block;
+    margin-top: 7px;
+    text-align: left;
+  }
+
+  .card p {
+    margin: 9px 0 0;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .qr-section {
+    padding: 52px 20px;
+    gap: 30px;
+  }
+
+  .qr-card {
+    max-width: 100%;
+    padding: 13px;
+  }
+
+  .qr-card img {
+    width: min(62vw, 220px);
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 32px 20px;
+  }
+
+  .footer-copy,
+  .developer-contact {
+    width: 100%;
+  }
+
+  .developer-contact {
+    align-items: stretch;
+  }
+
+  .developer-whatsapp {
+    text-align: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .hero h1 {
+    font-size: 39px;
+  }
+
+  .card {
+    grid-template-columns: 100px minmax(0, 1fr);
+  }
+
+  .card-body {
+    padding: 14px 12px;
+  }
+}
