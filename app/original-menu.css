@@ -9,8 +9,9 @@
 .original-menu img {
   display: block;
   width: 100%;
-  max-height: 420px;
-  object-fit: cover;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
   object-position: center;
 }
 
@@ -51,6 +52,6 @@
 }
 
 @media (max-width: 600px) {
-  .original-menu img { min-height: 210px; object-fit: cover; }
+  .original-menu img { height: auto; min-height: 0; object-fit: contain; }
   .original-menu figcaption { right: 12px; text-align: center; }
 }
