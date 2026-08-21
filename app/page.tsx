@@ -132,9 +132,9 @@ const productArt: Record<string, Record<string, { image: string; position: strin
     "Pitbull": { image: "/products/cachorro-pitbull-limpo.png", position: "center", size: "cover" },
   },
   "Bifanas": {
-    "Simples": { image: "/products/bifana-simples.jpg", position: "52% center", size: "cover" },
-    "Especial": { image: "/products/bifana-especial.jpg", position: "18% center", size: "cover" },
-    "Super": { image: "/products/bifana-super.jpg", position: "18% center", size: "cover" },
+    "Simples": { image: "/products/bifana-simples-limpa.png", position: "center", size: "cover" },
+    "Especial": { image: "/products/bifana-especial-limpa.png", position: "center", size: "cover" },
+    "Super": { image: "/products/bifana-super-limpa.png", position: "center", size: "cover" },
   },
   "Porções & batatas": {
     "Simples": { image: "/products/batata-simples-restaurada.png", position: "center", size: "cover" },
