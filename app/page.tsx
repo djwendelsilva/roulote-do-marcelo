@@ -29,7 +29,7 @@ const menu: Record<string, Item[]> = {
   "Bifanas": [
     { name: "Simples", price: "5,50 €", description: "2 bifes de bifana no pão. Com bebida." },
     { name: "Especial", price: "8,50 €", description: "2 bifes de bifana no pão, fiambre, queijo e bacon. Com bebida." },
-    { name: "Super", price: "10,00 €", description: "Bifana Super. Com bebida e batata." },
+    { name: "Super", price: "12,00 €", description: "2 bifes de bifana no pão, 2 ovos, fiambre, queijo, bacon e molho da casa. Com bebida e batata." },
   ],
   "Porções & batatas": [
     { name: "Simples", price: "3,50 €", description: "Porção de batata frita." },
