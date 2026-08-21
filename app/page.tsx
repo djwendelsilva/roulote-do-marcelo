@@ -127,9 +127,9 @@ const productArt: Record<string, Record<string, { image: string; position: strin
     "X Burger": { image: "/products/hamburguer-x-burger-limpo.png", position: "center", size: "cover" },
   },
   "Cachorros": {
-    "Simples": { image: "/products/cachorro-simples.jpg", position: "18% center", size: "cover" },
-    "Especial": { image: "/products/cachorro-especial.jpg", position: "18% center", size: "cover" },
-    "Pitbull": { image: "/products/cachorro-pitbull.jpg", position: "18% center", size: "cover" },
+    "Simples": { image: "/products/cachorro-simples-limpo.png", position: "center", size: "cover" },
+    "Especial": { image: "/products/cachorro-especial-limpo.png", position: "center", size: "cover" },
+    "Pitbull": { image: "/products/cachorro-pitbull-limpo.png", position: "center", size: "cover" },
   },
   "Bifanas": {
     "Simples": { image: "/products/bifana-simples.jpg", position: "52% center", size: "cover" },
@@ -145,9 +145,9 @@ const productArt: Record<string, Record<string, { image: string; position: strin
     "Kebab misto": { image: "/products/kebab-misto.jpg", position: "center", size: "cover" },
   },
   "Pratos & extras": {
-    "Banquete dos Deuses": { image: "/products/banquete-dos-deuses-v2.jpg", position: "center", size: "cover" },
-    "Entremeada": { image: "/products/entremeada-v2.jpg", position: "center", size: "cover" },
-    "Prego": { image: "/products/prego-v2.jpg", position: "center", size: "cover" },
+    "Banquete dos Deuses": { image: "/products/banquete-dos-deuses-limpo.png", position: "center", size: "cover" },
+    "Entremeada": { image: "/products/entremeada-limpa.png", position: "center", size: "cover" },
+    "Prego": { image: "/products/prego-limpo.png", position: "center", size: "cover" },
   },
   "Vinhos": {
     "Vinho branco — copo": beverageArt.wine,
