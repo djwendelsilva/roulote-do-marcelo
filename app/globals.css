@@ -126,6 +126,45 @@
   font-size: 11px;
 }
 
+.hero .shield {
+  width: 320px;
+  height: 400px;
+  padding-top: 20px;
+  border: 0;
+  clip-path: none;
+  background: url("/medieval-shield.png") center / contain no-repeat;
+  filter: drop-shadow(0 30px 42px rgba(0, 0, 0, 0.9));
+}
+
+.hero .shield span {
+  font-size: 70px;
+  color: #e9a13b;
+  text-shadow: 0 3px 8px #000;
+}
+
+.hero .shield b {
+  color: var(--cream);
+  font-size: 22px;
+  line-height: 1.45;
+  text-shadow: 0 3px 8px #000;
+}
+
+@media (max-width: 850px) {
+  .hero .shield {
+    right: -34px;
+    width: 190px;
+    height: 238px;
+  }
+
+  .hero .shield span {
+    font-size: 46px;
+  }
+
+  .hero .shield b {
+    font-size: 14px;
+  }
+}
+
 @media (max-width: 700px) {
   .developer-contact {
     width: 100%;
@@ -211,7 +250,7 @@
     padding: 17px 20px;
   }
 
-  .shield {
+  .hero .shield {
     top: auto;
     right: -54px;
     bottom: 45px;
@@ -222,11 +261,11 @@
     pointer-events: none;
   }
 
-  .shield span {
+  .hero .shield span {
     font-size: 42px;
   }
 
-  .shield b {
+  .hero .shield b {
     font-size: 13px;
   }
 
