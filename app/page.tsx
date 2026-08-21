@@ -44,6 +44,47 @@ const menu: Record<string, Item[]> = {
     { name: "Entremeada", price: "5,50 €", description: "Entremeada no pão. Com bebida." },
     { name: "Prego", price: "6,00 €", description: "Prego no pão. Com bebida." },
   ],
+  "Vinhos": [
+    { name: "Vinho branco — copo", price: "1,20 €", description: "Vinho branco servido a copo." },
+    { name: "Vinho tinto — copo", price: "1,50 €", description: "Vinho tinto servido a copo." },
+  ],
+  "Refrigerantes & águas": [
+    { name: "Coca-Cola", price: "1,90 €", description: "Refrigerante." },
+    { name: "Fanta", price: "1,90 €", description: "Refrigerante." },
+    { name: "Guaraná Antarctica", price: "1,90 €", description: "Refrigerante." },
+    { name: "Sprite", price: "1,90 €", description: "Refrigerante." },
+    { name: "Fuze Tea", price: "1,90 €", description: "Chá gelado." },
+    { name: "Ice Tea", price: "1,90 €", description: "Chá gelado." },
+    { name: "Água Castelo", price: "1,90 €", description: "Água com gás." },
+    { name: "Sumol", price: "1,90 €", description: "Refrigerante." },
+    { name: "7UP", price: "1,90 €", description: "Refrigerante." },
+    { name: "Red Bull", price: "3,00 €", description: "Bebida energética." },
+    { name: "Água 500 ml", price: "1,00 €", description: "Água mineral, garrafa de 500 ml." },
+    { name: "Água 1,5 L", price: "2,00 €", description: "Água mineral, garrafa de 1,5 L." },
+    { name: "Água das Pedras", price: "1,90 €", description: "Água com gás." },
+    { name: "Água tónica", price: "1,90 €", description: "Água tónica." },
+  ],
+  "Cervejas & sidra": [
+    { name: "Imperial", price: "1,30 €", description: "Cerveja à pressão." },
+    { name: "Imperial média", price: "1,60 €", description: "Cerveja à pressão, tamanho médio." },
+    { name: "Imperial grande", price: "3,50 €", description: "Cerveja à pressão, tamanho grande." },
+    { name: "Sagres mini", price: "1,50 €", description: "Cerveja Sagres mini." },
+    { name: "Sagres média", price: "2,00 €", description: "Cerveja Sagres média." },
+    { name: "Super Bock mini", price: "1,50 €", description: "Cerveja Super Bock mini." },
+    { name: "Super Bock média", price: "2,00 €", description: "Cerveja Super Bock média." },
+    { name: "Heineken", price: "2,00 €", description: "Cerveja Heineken." },
+    { name: "Corona", price: "2,30 €", description: "Cerveja Corona." },
+    { name: "Somersby mini", price: "2,00 €", description: "Sidra Somersby mini." },
+    { name: "Somersby média", price: "3,00 €", description: "Sidra Somersby média." },
+  ],
+  "Whisky & licores": [
+    { name: "Red Label", price: "Dose 4,00 € · Shot 2,00 €", description: "Whisky Johnnie Walker Red Label." },
+    { name: "Grant’s", price: "Dose 4,00 € · Shot 2,00 €", description: "Whisky Grant’s." },
+    { name: "Beirão", price: "Dose 3,50 € · Shot 1,80 €", description: "Licor Beirão." },
+  ],
+  "Café": [
+    { name: "Café", price: "1,00 €", description: "Café expresso." },
+  ],
 };
 
 const categoryImage: Record<string, string> = {
@@ -99,6 +140,7 @@ const productArt: Record<string, Record<string, { image: string; position: strin
 
 const icon: Record<string, string> = {
   "Hambúrgueres": "ᚱ", Cachorros: "ᚲ", Bifanas: "ᛒ", "Porções & batatas": "ᛃ", Kebabs: "ᚴ", "Pratos & extras": "ᛟ",
+  Vinhos: "🍷", "Refrigerantes & águas": "🥤", "Cervejas & sidra": "🍺", "Whisky & licores": "🥃", Café: "☕",
 };
 
 export default function Home() {
@@ -130,7 +172,7 @@ export default function Home() {
           {categories.map((category) => <button key={category} className={active === category ? "active" : ""} onClick={() => { setActive(category); setQuery(""); }}><b>{icon[category]}</b><span>{category}</span></button>)}
         </div>
         <div className="category-head"><div><p>CATEGORIA</p><h3>{active}</h3></div><span>{items.length} {items.length === 1 ? "item" : "itens"}</span></div>
-        <figure className="original-menu"><img src={categoryImage[active]} alt={`Arte original da categoria ${active}`}/><figcaption>Arte original · toque nas categorias para consultar os produtos</figcaption></figure>
+        {categoryImage[active] && <figure className="original-menu"><img src={categoryImage[active]} alt={`Arte original da categoria ${active}`}/><figcaption>Arte original · toque nas categorias para consultar os produtos</figcaption></figure>}
         <div className="cards">
           {items.map((item, index) => {
             const art = productArt[active]?.[item.name];
