@@ -90,15 +90,6 @@ const menu: Record<string, Item[]> = {
   ],
 };
 
-const categoryImage: Record<string, string> = {
-  "Hambúrgueres": "/menus/hamburgueres.jpeg",
-  "Cachorros": "/menus/cachorros-bifanas.jpeg",
-  "Bifanas": "/menus/cachorros-bifanas.jpeg",
-  "Porções & batatas": "/menus/batatas-lanches-kebab.jpeg",
-  "Kebabs": "/menus/batatas-lanches-kebab.jpeg",
-  "Pratos & extras": "/menus/pratos.jpeg",
-};
-
 const beverageArt = {
   can: { image: "/beverages/can.png", position: "center", size: "contain" },
   glassBottle: { image: "/beverages/glass-bottle.png", position: "center", size: "contain" },
@@ -238,7 +229,6 @@ export default function Home() {
           {categories.map((category) => <button key={category} className={active === category ? "active" : ""} onClick={() => { setActive(category); setQuery(""); }}><CategoryIcon category={category}/><span>{category}</span></button>)}
         </div>
         <div className="category-head"><div><p>CATEGORIA</p><h3>{active}</h3></div><span>{items.length} {items.length === 1 ? "item" : "itens"}</span></div>
-        {categoryImage[active] && <figure className="original-menu"><img src={categoryImage[active]} alt={`Arte original da categoria ${active}`}/><figcaption>Arte original · toque nas categorias para consultar os produtos</figcaption></figure>}
         <div className="cards">
           {items.map((item, index) => {
             const art = productArt[active]?.[item.name];
