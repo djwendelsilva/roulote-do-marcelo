@@ -117,7 +117,7 @@ const productArt: Record<string, Record<string, { image: string; position: strin
     "Thor": { image: "/products/thor.png", position: "22% center", size: "cover" },
     "Floki": { image: "/products/floki.jpg", position: "22% center", size: "cover" },
     "Lagertha": { image: "/products/lagertha.png", position: "18% center", size: "cover" },
-    "Vikings Supremo": { image: "/menus/hamburgueres.jpeg", position: "86% 51%", size: "260%" },
+    "Vikings Supremo": { image: "/products/vikings-supremo.jpg", position: "center", size: "cover" },
     "Odin": { image: "/products/odin.png", position: "18% center", size: "cover" },
     "Simples": { image: "/products/hamburguer-simples.jpg", position: "left center", size: "cover" },
     "Duplo": { image: "/products/duplo.jpg", position: "left center", size: "cover" },
