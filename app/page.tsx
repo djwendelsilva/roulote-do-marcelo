@@ -212,19 +212,19 @@ export default function Home() {
     <main>
       <header className="hero">
         <div className="ember ember-one" /><div className="ember ember-two" />
-        <nav><span className="brand-mark">RM</span><a href="#menu">VER EMENTA ↓</a></nav>
+        <nav><span className="brand-mark">RM</span><a href="#menu">VER MENU ↓</a></nav>
         <div className="hero-copy">
           <p className="eyebrow">SABORES DIGNOS DE VALHALLA</p>
           <h1>ROULOTE<br/><span>DO MARCELO</span></h1>
           <p className="lead">Fome de guerreiro? Escolha o seu favorito e faça o pedido.</p>
-          <a className="primary" href="#menu">Explorar ementa <b>→</b></a>
+          <a className="primary" href="#menu">Explorar menu <b>→</b></a>
         </div>
         <div className="shield" aria-hidden="true"><span>ᛟ</span><b>FOGO<br/>E SABOR</b></div>
       </header>
 
       <section className="menu-section" id="menu">
-        <div className="section-title"><p>O BANQUETE</p><h2>Escolha sua batalha</h2><span>Ementa reconstruída a partir das artes originais do Roulote do Marcelo.</span></div>
-        <label className="search"><span>⌕</span><input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Buscar na ementa" aria-label="Buscar na ementa"/></label>
+        <div className="section-title"><p>O BANQUETE</p><h2>Escolha sua batalha</h2><span>Menu reconstruído a partir das artes originais do Roulote do Marcelo.</span></div>
+        <label className="search"><span>⌕</span><input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Buscar no menu" aria-label="Buscar no menu"/></label>
         <div className="category-tabs" role="tablist">
           {categories.map((category) => <button key={category} className={active === category ? "active" : ""} onClick={() => { setActive(category); setQuery(""); }}><CategoryIcon category={category}/><span>{category}</span></button>)}
         </div>
@@ -241,10 +241,10 @@ export default function Home() {
       </section>
 
 
-      <section className="qr-section"><div className="qr-copy"><p>APONTE A CÂMERA</p><h2>Ementa sempre à mão</h2><span>Leia o QR Code para abrir a ementa online em qualquer telemóvel.</span></div><div className="qr-card"><img src="/qrcode.png" alt="QR Code para abrir a ementa digital"/><small>EMENTA ONLINE</small></div></section>
+      <section className="qr-section"><div className="qr-copy"><p>APONTE A CÂMERA</p><h2>Menu sempre à mão</h2><span>Leia o QR Code para abrir o menu online em qualquer telemóvel.</span></div><div className="qr-card"><img src="/qrcode.png" alt="QR Code para abrir o menu digital"/><small>MENU ONLINE</small></div></section>
       <footer>
         <span className="brand-mark">RM</span>
-        <div className="footer-copy"><p>Roulote do Marcelo · Ementa digital</p><small>Sabores dignos de Valhalla</small></div>
+        <div className="footer-copy"><p>Roulote do Marcelo · Menu digital</p><small>Sabores dignos de Valhalla</small></div>
         <div className="developer-contact">
           <span>Desenvolvedor: <strong>Wendel Silva</strong></span>
           <a className="developer-whatsapp" href="https://wa.me/5521991902018" target="_blank" rel="noreferrer">WhatsApp</a>
