@@ -3,6 +3,7 @@
   position: relative;
   display: grid;
   place-items: center;
+  height: min(55vh, 520px);
   overflow: hidden;
   border: 1px solid #4b3522;
   background: #080808;
@@ -10,10 +11,10 @@
 
 .original-menu img {
   display: block;
-  width: auto;
-  max-width: 100%;
-  height: auto;
-  max-height: min(70vh, 680px);
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  max-height: none;
   object-fit: contain;
   object-position: center;
 }
@@ -55,6 +56,7 @@
 }
 
 @media (max-width: 600px) {
+  .original-menu { height: auto; }
   .original-menu img { width: 100%; height: auto; min-height: 0; max-height: none; object-fit: contain; }
   .original-menu figcaption { right: 12px; text-align: center; }
 }
