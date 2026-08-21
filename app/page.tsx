@@ -45,8 +45,8 @@ const menu: Record<string, Item[]> = {
     { name: "Prego", price: "6,00 €", description: "Prego no pão. Com bebida." },
   ],
   "Vinhos": [
-    { name: "Vinho branco — copo", price: "1,20 €", description: "Vinho branco servido a copo." },
-    { name: "Vinho tinto — copo", price: "1,50 €", description: "Vinho tinto servido a copo." },
+    { name: "Vinho branco — copo", price: "1,00 €", description: "Vinho branco servido a copo." },
+    { name: "Vinho tinto — copo", price: "1,00 €", description: "Vinho tinto servido a copo." },
   ],
   "Refrigerantes & águas": [
     { name: "Coca-Cola", price: "1,90 €", description: "Refrigerante." },
