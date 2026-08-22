@@ -300,11 +300,15 @@
   }
 
   .hero-warrior {
-    right: -105px;
-    bottom: -12px;
-    width: 330px;
-    height: 58%;
-    opacity: 0.38;
+    top: 56%;
+    right: auto;
+    bottom: auto;
+    left: 50%;
+    width: min(88vw, 340px);
+    height: 44%;
+    opacity: 0.62;
+    transform: translateX(-50%);
+    background-position: center bottom;
     filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.85));
   }
 
