@@ -71,16 +71,8 @@
 }
 
 .developer-contact strong,
-.developer-contact > a:not(.developer-whatsapp) {
+.developer-contact > a {
   color: var(--cream);
-}
-
-.developer-whatsapp {
-  padding: 10px 14px;
-  border-radius: 4px;
-  background: #25d366;
-  color: #07150b;
-  font-weight: 800;
 }
 
 .instagram-link {
@@ -468,11 +460,6 @@
     align-items: center;
     min-height: 44px;
     overflow-wrap: anywhere;
-  }
-
-  .developer-whatsapp {
-    justify-content: center;
-    text-align: center;
   }
 
   .instagram-link {
