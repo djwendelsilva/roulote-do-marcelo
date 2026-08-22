@@ -236,7 +236,7 @@ export default function Home() {
       </header>
 
       <section className="menu-section" id="menu">
-        <div className="section-title"><p>O BANQUETE</p><h2>Escolha sua batalha</h2><span>Menu reconstruído a partir das artes originais do Roulote do Marcelo.</span></div>
+        <div className="section-title"><p>O BANQUETE</p><h2>Escolha sua batalha</h2></div>
         <label className="search"><span>⌕</span><input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Buscar no menu" aria-label="Buscar no menu"/></label>
         <div className="category-tabs" role="tablist">
           {categories.map((category) => <button key={category} className={active === category ? "active" : ""} onClick={() => { setActive(category); setQuery(""); }}><CategoryIcon category={category}/><span>{category}</span></button>)}
