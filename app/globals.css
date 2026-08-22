@@ -203,7 +203,7 @@
 }
 
 /* Mobile layout */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   html,
   body {
     max-width: 100%;
@@ -260,7 +260,7 @@
   .hero h1 {
     max-width: 100%;
     margin: 18px 0 24px;
-    font-size: clamp(39px, 12.5vw, 54px);
+    font-size: clamp(39px, 12.5vw, 64px);
     line-height: 0.9;
     letter-spacing: -2px;
     overflow-wrap: anywhere;
@@ -279,7 +279,7 @@
 
   .primary {
     width: 100%;
-    max-width: 330px;
+    max-width: 420px;
     min-height: 58px;
     justify-content: space-between;
     gap: 16px;
@@ -311,9 +311,9 @@
     right: auto;
     bottom: auto;
     left: auto;
-    width: min(88vw, 340px);
-    height: min(100vw, 400px);
-    margin: 0 auto -56px;
+    width: min(88vw, 420px);
+    height: min(100vw, 470px);
+    margin: 20px auto -56px;
     opacity: 0.68;
     transform: none;
     background-position: center bottom;
