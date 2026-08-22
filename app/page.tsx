@@ -76,7 +76,7 @@ const menu: Record<string, Item[]> = {
     { name: "Sagres média", price: "2,00 €", description: "33 cl (330 ml), garrafa de vidro." },
     { name: "Super Bock mini", price: "1,50 €", description: "Cerveja Super Bock mini em garrafa de vidro." },
     { name: "Super Bock média", price: "2,00 €", description: "Cerveja Super Bock média em garrafa de vidro." },
-    { name: "Heineken", price: "2,00 €", description: "Cerveja Heineken." },
+    { name: "Heineken", price: "2,00 €", description: "Heineken mini, garrafa de vidro." },
     { name: "Corona", price: "2,30 €", description: "Cerveja Corona em garrafa de vidro." },
     { name: "Somersby Maçã mini", price: "2,00 €", description: "Sidra Somersby Maçã mini em garrafa de vidro." },
     { name: "Somersby Maçã média", price: "3,00 €", description: "Sidra Somersby Maçã média em garrafa de vidro." },
