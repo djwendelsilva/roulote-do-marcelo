@@ -221,6 +221,11 @@
   }
 
   .hero nav a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0 6px;
     font-size: 10px;
     letter-spacing: 1.4px;
     white-space: nowrap;
@@ -232,7 +237,8 @@
 
   .hero .header-instagram {
     width: auto;
-    min-height: 38px;
+    min-width: 44px;
+    min-height: 44px;
     padding: 7px 9px;
   }
 
@@ -300,14 +306,16 @@
   }
 
   .hero-warrior {
-    top: 56%;
+    position: relative;
+    top: auto;
     right: auto;
     bottom: auto;
-    left: 50%;
+    left: auto;
     width: min(88vw, 340px);
-    height: 44%;
-    opacity: 0.62;
-    transform: translateX(-50%);
+    height: min(100vw, 400px);
+    margin: 0 auto -56px;
+    opacity: 0.68;
+    transform: none;
     background-position: center bottom;
     filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.85));
   }
@@ -455,7 +463,15 @@
     align-items: stretch;
   }
 
+  .developer-contact > a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    overflow-wrap: anywhere;
+  }
+
   .developer-whatsapp {
+    justify-content: center;
     text-align: center;
   }
 
@@ -479,7 +495,8 @@
   }
 
   .hero .header-instagram {
-    min-height: 36px;
+    min-width: 44px;
+    min-height: 44px;
     padding: 7px;
   }
 
