@@ -232,7 +232,7 @@ export default function Home() {
           <p className="lead">Fome de guerreiro? Escolha o seu favorito e faça o pedido.</p>
           <a className="primary" href="#menu">Explorar menu <b>→</b></a>
         </div>
-        <div className="shield" aria-hidden="true"><span>ᛟ</span><b>FOGO<br/>E SABOR</b></div>
+        <div className="hero-warrior" aria-hidden="true" />
       </header>
 
       <section className="menu-section" id="menu">
